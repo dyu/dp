@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="content-type" content="text/html;charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <title>bookmarks</title>
+  </head>
+  <body>
+    <div id="app"></div>
+    <div id="comments"></div>
+    <iframe id="comments-auth" style="width:100%;border:none"></iframe>
+    <script>
+    window.rpc_host = 'https://rpc.dyuproject.com'
+    window.hide_backup = true
+    window.comments_max_depth = 10
+    window.comments_collapse_depth = 7
+    window.comments_auth_host = 'https://api.dyuproject.com'
+    window.comments_auth_flags = 0xF7
+    </script>
+    <script src="dist/build.js"></script>
+    <script src="/comments/dist/build.js"></script>
+    <link rel="stylesheet" href="/comments/dist/build.css" />
+    <style>
+    #comments {
+      padding: 0 1.5em;
+      margin-top: 2em;
+      font-size: 0.8em;
+    }
+    </style>
+  </body>
+</html>

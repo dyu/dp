@@ -57,8 +57,11 @@
     window.auth_config = {
         start: start,
         host: 'https://api.dyuproject.com',
-        users: ['dyu@github', 'david.yu.ftw@gmail.com'],
-        idx: 0, handleOauth: null, retry: null
+        users: ['dyu@github'],
+        idx: 0, handleOauth: null, retry: null,
+        on: function(type, data) {
+            type === 1 && start(data)
+        }
     }
     </script>
     <script src="/start.js"></script>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="content-type" content="text/html;charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon" />
+    <title>auth test</title>
+  </head>
+  <body>
+    <div id="app"></div>
+    <script>
+    function showMsg(msg, enable) {
+        var el = document.createElement('p')
+        el.innerText = msg
+        document.body.insertBefore(el, document.body.firstChild);
+    }
+    window.rpc_host = 'https://api.dyuproject.com'
+    window.auth_config = {
+        host: 'https://api.dyuproject.com',
+        users: ['@github'], 
+        idx: 0, handleOauth: null, retry: null,
+        start: function (auth_data) {
+            showMsg(auth_data.info.name || auth_data.es_user)
+        }
+    }
+    </script>
+    <script src="/start.js"></script>
+  </body>
+</html>

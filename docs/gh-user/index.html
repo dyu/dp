@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon" />
-    <title>auth test</title>
+    <title>prints your github username</title>
   </head>
   <body>
     <script>
@@ -22,7 +22,7 @@
         on: function (type, data) {
             if (type === 0) showMsg(data)
             // start or login
-            else if (type < 3) showMsg(data.info.name || data.es_user)
+            else if (type < 3) showMsg(data.info.login || data.es_user)
         }
     }
     </script>

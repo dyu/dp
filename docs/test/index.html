@@ -9,14 +9,12 @@
     <title>auth test</title>
   </head>
   <body>
-    <div id="app"></div>
     <script>
     function showMsg(msg, enable) {
         var el = document.createElement('p')
         el.innerText = msg
         document.body.insertBefore(el, document.body.firstChild);
     }
-    window.rpc_host = 'https://api.dyuproject.com'
     window.auth_config = {
         host: 'https://api.dyuproject.com',
         users: ['@github'], 

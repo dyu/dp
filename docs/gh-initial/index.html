@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="content-type" content="text/html;charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon" />
+    <title>After initial github login, you can choose to log with other providers</title>
+  </head>
+  <body>
+    <div id="links" style="display:none;position:top:2px;right:5em;">
+      <button onclick="relogin(1)">google</button>
+      <button onclick="relogin(2)">github</button>
+      <button onclick="relogin(3)">gitlab</button>
+      <button onclick="relogin(4)">bitbucket</button>
+    </div>
+    <div id="msgs"><!--#--></div>
+    <script>
+    var links = document.getElementById('links'),
+        msgs = document.getElementById('msgs'),
+        links_shown = false
+    function relogin(type) {
+        config.idx = type - 1
+        config.retry()
+    }
+    function showMsg(msg) {
+        var el = document.createElement('p')
+        el.innerText = msg
+        msgs.insertBefore(el, msgs.firstChild);
+    }
+    
+    window.auth_config = config = {
+        host: 'https://api.dyuproject.com',
+        users: ['@google', '@github', '@gitlab', '@bitbucket'], 
+        idx: 1, handleOauth: null, retry: null, flags: 1,
+        on: function (type, data) {
+            if (type === 0) {
+                showMsg(data)
+                return
+            }
+            // start or login
+            if (type !== 3) showMsg(data.info.name || data.es_user)
+            else config.idx = 1
+            
+            if (!links_shown && config.retry) {
+                links_shown = true
+                links.style.display = 'block'
+            }
+        }
+    }
+    </script>
+    <script src="/start.js"></script>
+    <style>
+    #links > button { background: transparent; border: none; cursor: pointer; color: #0080ff; }
+    #links > button:hover { border-bottom: 1px solid #0080ff; }
+    </style>
+  </body>
+</html>

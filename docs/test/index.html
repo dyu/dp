@@ -19,8 +19,10 @@
         host: 'https://api.dyuproject.com',
         users: ['@github'], 
         idx: 0, handleOauth: null, retry: null,
-        start: function (auth_data) {
-            showMsg(auth_data.info.name || auth_data.es_user)
+        on: function (type, data) {
+            if (type === 0) showMsg(data)
+            // start or login
+            else if (type < 3) showMsg(data.info.name || data.es_user)
         }
     }
     </script>

@@ -57,7 +57,7 @@
     window.auth_config = {
         host: 'https://api.dyuproject.com',
         users: ['dyu@github'],
-        idx: 0, handleOauth: null, retry: null,
+        idx: 0, handleOauth: null, retry: null, flags: 1,
         on: function(type, data) {
             type === 1 && start(data)
         }

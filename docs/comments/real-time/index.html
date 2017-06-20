@@ -5,9 +5,9 @@
     <meta http-equiv="content-type" content="text/html;charset=utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
-    <link rel="stylesheet" href="dist/build.css" />
-    <title>authenticated comments</title>
+    <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="../dist/build.css" />
+    <title>real-time authenticated comments</title>
   </head>
   <body>
     <h3><a href="anon.html">anonymous</a> | authenticated</h3>
@@ -18,10 +18,12 @@
       limit_depth: 10,
       auth_host: 'https://api.dyuproject.com',
       auth_flags: 0x77,
+      ws_enabled: true,
+      ws_host: 'https://api.dyuproject.com/sub',
       rpc_host: 'https://api.dyuproject.com'
     }
     </script>
-    <script src="dist/build.js"></script>
+    <script src="../dist/build.js"></script>
   </body>
 </html>
 

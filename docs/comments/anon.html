@@ -7,18 +7,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="dist/build.css" />
-    <title>authenticated comments</title>
+    <title>anonymous comments</title>
   </head>
   <body>
-    <h3><a href="anon.html">anonymous</a> | authenticated</h3>
+    <h3>anonymous | <a href="/comments/">authenticated</a></h3>
     <div id="comments"></div>
     <script>
     window.comments_config = {
       collapse_depth: 7,
       limit_depth: 10,
-      auth_host: 'https://api.dyuproject.com',
-      auth_flags: 0x77,
-      rpc_host: 'https://api.dyuproject.com'
+      rpc_host: 'https://rpc.dyuproject.com'
     }
     </script>
     <script src="dist/build.js"></script>

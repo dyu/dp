@@ -11,15 +11,17 @@
   <body>
     <div id="app"></div>
     <div id="comments"></div>
-    <iframe id="comments-auth" style="width:100%;border:none"></iframe>
     <script>
     window.rpc_host = 'https://rpc.dyuproject.com'
     window.hide_backup = true
-    window.comments_max_depth = 10
-    window.comments_collapse_depth = 7
-    window.comments_post_id = 1658982680 // to have same comments as dyuproject.com/bookmarks/
-    window.comments_auth_host = 'https://api.dyuproject.com'
-    window.comments_auth_flags = 0xF7
+    window.comments_config = {
+      post_id: 1658982680,
+      collapse_depth: 7,
+      limit_depth: 10,
+      auth_host: 'https://api.dyuproject.com',
+      auth_flags: 0x77,
+      rpc_host: 'https://api.dyuproject.com'
+    }
     </script>
     <script src="dist/build.js"></script>
     <script src="/comments/dist/build.js"></script>

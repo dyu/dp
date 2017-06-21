@@ -7,13 +7,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="dist/build.css" />
+    <style>
+      body > div > a { font-size: 1.1em; text-decoration: none; color: #0080ff; }
+      body > div > dd { margin-left: 0.2em; margin: 0.5em 0 0.5em 0.1em; }
+    </style>
     <title>welcome</title>
   </head>
   <body>
-    <p><a href="auth/">auth</a><br />&nbsp;&nbsp;- shows the users authenticated via oauth</p>
-    <p><a href="bookmarks/">bookmarks</a><br />&nbsp;&nbsp;- bookmarking app with chrome and delicious import support</p>
-    <p><a href="comments/">comments</a><br />&nbsp;&nbsp;- real-time comments with markdown and auth support</p>
-    <p><a href="gh-user/">gh-user</a><br />&nbsp;&nbsp;- prints your github username (pluggable client-side oauth example)</p>
-    <p><a href="sub/">sub/</a><br />&nbsp;&nbsp;- prints the raw real-time events (e.g. a comment being posted)</p>
-  </body>
+    <div><a href="auth/">auth</a>
+      <dd>- shows the users authenticated via oauth</dd>
+    </div>
+    <div><a href="bookmarks/">bookmarks</a>
+      <dd>- bookmarking app with chrome and delicious import support</dd>
+    </div>
+    <div><a href="comments/">comments</a>
+      <dd>- real-time comments with markdown and auth support</dd>
+    </div>
+    <div><a href="gh-user/">gh-user</a>
+      <dd>- prints your github username (pluggable client-side oauth example)</dd>
+    </div>
+    <div><a href="sub/">sub</a>
+      <dd>- subscribe to the real-time events (e.g. a comment being posted)</dd>
+    </div>
+    <div><a href="todo/">todo</a>
+      <dd>- todo app with mobile (flutter), desktop (nwjs) and web frontends</dd>
+    </div>
+  </dd>
 </html>

@@ -12,9 +12,11 @@
   <body>
     <div id="auth"></div>
     <script>
-    window.rpc_host = 'https://api.dyuproject.com'
-    window.auth_host = 'https://api.dyuproject.com'
-    window.auth_iframe = '/login/'
+    window.auth_config = {
+        host: 'https://api.dyuproject.com',
+        proxy: '/login/',
+        flags: 1
+    }
     </script>
     <script src="dist/build.js"></script>
   </body>

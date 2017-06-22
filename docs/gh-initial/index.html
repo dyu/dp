@@ -33,7 +33,7 @@
     window.auth_config = config = {
         host: 'https://api.dyuproject.com',
         users: ['@google', '@github', '@gitlab', '@bitbucket'], 
-        idx: 1, handleOauth: null, retry: null, flags: 1,
+        idx: 1, retry: null, flags: 1,
         on: function (type, data) {
             if (type === 0) {
                 showMsg(data)

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="content-type" content="text/html;charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon" />
+    <title>prints your github username</title>
+  </head>
+  <body>
+    <script>
+    function showMsg(msg) {
+        var el = document.createElement('p')
+        el.innerText = msg
+        document.body.insertBefore(el, document.body.firstChild);
+    }
+    window.auth_config = {
+        host: 'https://api.dyuproject.com',
+        users: ['@github'], 
+        idx: 0, handleOauth: null, retry: null, flags: 1,
+        on: function (type, data) {
+            if (type === 0) showMsg(data)
+            // start or login
+            else if (type < 3) showMsg(data.info.name || (data.info.login + ' is nameless'))
+        }
+    }
+    </script>
+    <script src="/start.js"></script>
+  </body>
+</html>

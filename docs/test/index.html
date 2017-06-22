@@ -23,9 +23,10 @@
             if (type === 0) showMsg(data)
             // start or login
             else if (type < 3) showMsg(data.info.name || data.es_user)
-        }
+        },
+        proxy: '/login/'
     }
     </script>
-    <script src="/start.js"></script>
+    <script src="/login/start.js"></script>
   </body>
 </html>

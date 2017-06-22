@@ -60,9 +60,10 @@
         idx: 0, handleOauth: null, retry: null, flags: 1,
         on: function(type, data) {
             type === 1 && start(data)
-        }
+        },
+        proxy: '/login/'
     }
     </script>
-    <script src="/start.js"></script>
+    <script src="/login/start.js"></script>
   </body>
 </html>

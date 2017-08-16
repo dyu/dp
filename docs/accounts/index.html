@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="content-type" content="text/html;charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>accounts</title>
+  </head>
+  <body>
+    <div id="start"></div>
+    <div id="app"></div>
+    <script>(function(){
+    var auth_host = 'https://api.dyuproject.com'
+    window.rpc_host = auth_host
+    window.start_config = {
+        auth_flags: 2,
+        auth_proxy: '/login/',
+        auth_host: auth_host,
+        accounts_host: auth_host,
+        start: 'dist/build.js'
+    }
+    })();</script>
+    <script src="dist/start.js"></script>
+    <link rel="stylesheet" href="dist/app.css" />
+  </body>
+</html>

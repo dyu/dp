@@ -52,6 +52,7 @@
         window.run_config = { url: url, title: title, notes: notes }
         
         appendEl('script', 'src', '../dist/bookmarklet.js')
+        appendEl('link', 'href', '../dist/bookmarklet.css')
     }
     window.rpc_host = 'https://api.dyuproject.com'
     window.auth_config = {

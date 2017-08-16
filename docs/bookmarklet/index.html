@@ -45,8 +45,12 @@
   </head>
   <body onload="start();" unselectable="on">
     <div id="app"></div>
-    <script>window.rpc_host = 'https://bookmarks.dyuproject.com'</script>
+    <script>
+    window.rpc_host = 'https://rpc.dyuproject.com'
+    window.fetch || document.write('<script src="/assets/js/fetch.min.js"><\/script>')
+    </script>
     <script src="../bookmarks/dist/bookmarklet.js"></script>
+    <link rel="stylesheet" href="../bookmarks/dist/bookmarklet.css" />
     <a id="bookmarklet" class="pending" href="javascript:popw='';Q='';x=document;y=window;if(x.selection) {Q=x.selection.createRange().text;} else if (y.getSelection) {Q=y.getSelection();} else if (x.getSelection) {Q=x.getSelection();}popw = y.open('https://apps.dyuproject.com/bookmarklet/#t=' + escape(Q) + '&u=' + escape(location.href) + '&n=' + escape(document.title),'bk-dp','scrollbars=no,width=475,height=540,top=175,left=75,status=yes,resizable=yes');if (!document.all) T = setTimeout('popw.focus()',50);void(0);">bookmarklet-dp</a>
   </body>
 </html>

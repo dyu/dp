@@ -10,26 +10,11 @@
   </head>
   <body>
     <div id="app"></div>
-    <div id="comments"></div>
-    <iframe id="comments-auth" style="width:100%;border:none"></iframe>
     <script>
     window.rpc_host = 'https://rpc.dyuproject.com'
-    window.hide_backup = true
-    window.comments_max_depth = 10
-    window.comments_collapse_depth = 7
-    window.comments_post_id = 1658982680 // to have same comments as dyuproject.com/bookmarks/
-    window.comments_auth_host = 'https://api.dyuproject.com'
-    window.comments_auth_flags = 0xF7
+    window.fetch || document.write('<script src="/assets/js/fetch.min.js"><\/script>')
     </script>
     <script src="dist/build.js"></script>
-    <script src="/comments/dist/prev/build.js"></script>
-    <link rel="stylesheet" href="/comments/dist/prev/build.css" />
-    <style>
-    #comments {
-      padding: 0 1.5em;
-      margin-top: 2em;
-      font-size: 0.8em;
-    }
-    </style>
+    <link rel="stylesheet" href="dist/app.css" />
   </body>
 </html>
